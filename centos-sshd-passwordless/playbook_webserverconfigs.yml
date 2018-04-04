@@ -1,0 +1,33 @@
+- name: This playbook will coinfigure and deploy webpages onubuntu and centos servers
+  hosts: all
+  become: yes
+  become_method: su
+  tasks: 
+   - name: Install nginx on UBuntuOS
+     apt: name=nginx update_cache=yes state=present
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+
+   - name: Install epel-release on CEntOS
+     apt: name=epel-release state=present
+     when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+
+   - name: Install nginx on centOS
+     apt: name=nginx update_cache=yes state=present
+     when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+
+   - name: Configure nginx on UbuntuOS
+     copy: src=ubuntu_default dest=/etc/nginx/sites-availables/default
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+
+   - name: Configure nginx on CEntOS
+     copy: src=centos_default dest=/etc/nginx/sites-availables/default
+     when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+ 
+   - name: Create custom web page in nginx
+     shell: "mkdir -p /var/html"
+
+   - name: Deploy webpage i nnginx
+     template: src=index.html.j2 dest=/var/html/index.html
+ 
+   - name: Restart nginx
+     service: name=nginx state=started
