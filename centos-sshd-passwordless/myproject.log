@@ -4709,3 +4709,583 @@ name: This playbook will coinfigure and deploy webpages onubuntu and centos serv
     "changed": false, 
     "ping": "pong"
 }
+2018-04-04 03:00:51,320 p=51752 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:00:51,329 p=51752 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:00:52,683 p=51752 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:00:52,693 p=51752 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:00:53,137 p=51752 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:00:55,558 p=51752 u=trainer |  ok: [centos1]
+2018-04-04 03:00:55,612 p=51752 u=trainer |  ok: [centos3]
+2018-04-04 03:00:55,623 p=51752 u=trainer |  ok: [centos2]
+2018-04-04 03:00:55,632 p=51752 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:00:55,794 p=51752 u=trainer |  skipping: [centos1]
+2018-04-04 03:00:55,795 p=51752 u=trainer |  skipping: [centos2]
+2018-04-04 03:00:55,795 p=51752 u=trainer |  skipping: [centos3]
+2018-04-04 03:01:05,170 p=51752 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:01:05,268 p=51752 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:01:05,741 p=51752 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:01:05,748 p=51752 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:01:05,991 p=51752 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:01:06,012 p=51752 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:01:06,065 p=51752 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:01:06,675 p=51752 u=trainer |  fatal: [centos1]: FAILED! => {"changed": false, "msg": "python-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2018-04-04 03:01:06,836 p=51752 u=trainer |  fatal: [centos3]: FAILED! => {"changed": false, "msg": "python-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2018-04-04 03:01:06,841 p=51752 u=trainer |  fatal: [centos2]: FAILED! => {"changed": false, "msg": "python-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2018-04-04 03:01:06,846 p=51752 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:01:06,902 p=51752 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:01:06,911 p=51752 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:01:06,925 p=51752 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:01:06,931 p=51752 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:01:07,064 p=51752 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:01:07,065 p=51752 u=trainer |  fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:01:07,086 p=51752 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:01:07,087 p=51752 u=trainer |  fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:01:07,102 p=51752 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:01:07,102 p=51752 u=trainer |  fatal: [ubuntu3]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:01:07,104 p=51752 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_webserverconfigs.retry
+
+2018-04-04 03:01:07,104 p=51752 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:01:07,104 p=51752 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:07,104 p=51752 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:07,105 p=51752 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:07,105 p=51752 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:07,105 p=51752 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:07,105 p=51752 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:01:54,962 p=52840 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:01:54,971 p=52840 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:01:56,976 p=52840 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:01:57,486 p=52840 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:01:58,366 p=52840 u=trainer |  ok: [centos2]
+2018-04-04 03:01:58,392 p=52840 u=trainer |  ok: [centos1]
+2018-04-04 03:01:58,413 p=52840 u=trainer |  ok: [centos3]
+2018-04-04 03:01:58,488 p=52840 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:01:58,494 p=52840 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:01:58,605 p=52840 u=trainer |  skipping: [centos1]
+2018-04-04 03:01:58,659 p=52840 u=trainer |  skipping: [centos2]
+2018-04-04 03:01:58,675 p=52840 u=trainer |  skipping: [centos3]
+2018-04-04 03:02:05,562 p=52840 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:02:06,754 p=52840 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:02:25,584 p=52840 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:02:25,589 p=52840 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:02:25,831 p=52840 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:02:25,842 p=52840 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:02:25,872 p=52840 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:02:26,666 p=52840 u=trainer |  fatal: [centos2]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 03:02:26,675 p=52840 u=trainer |  fatal: [centos1]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 03:02:26,675 p=52840 u=trainer |  fatal: [centos3]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 03:02:26,682 p=52840 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:02:26,772 p=52840 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:02:26,773 p=52840 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:02:26,806 p=52840 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:02:26,811 p=52840 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:02:26,918 p=52840 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:02:26,919 p=52840 u=trainer |  fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:02:26,956 p=52840 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:02:26,956 p=52840 u=trainer |  fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:02:26,962 p=52840 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:02:26,962 p=52840 u=trainer |  fatal: [ubuntu3]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:02:26,964 p=52840 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_webserverconfigs.retry
+
+2018-04-04 03:02:26,964 p=52840 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:02:26,964 p=52840 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:02:26,964 p=52840 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:02:26,964 p=52840 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 03:02:26,964 p=52840 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:02:26,965 p=52840 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:02:26,965 p=52840 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:04:30,076 p=53910 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:04:30,108 p=53910 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:04:32,689 p=53910 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:04:32,709 p=53910 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:04:33,685 p=53910 u=trainer |  ok: [centos1]
+2018-04-04 03:04:33,706 p=53910 u=trainer |  ok: [centos3]
+2018-04-04 03:04:33,726 p=53910 u=trainer |  ok: [centos2]
+2018-04-04 03:04:33,886 p=53910 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:04:33,893 p=53910 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:04:33,953 p=53910 u=trainer |  skipping: [centos1]
+2018-04-04 03:04:34,058 p=53910 u=trainer |  skipping: [centos2]
+2018-04-04 03:04:34,058 p=53910 u=trainer |  skipping: [centos3]
+2018-04-04 03:04:44,296 p=53910 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:04:45,415 p=53910 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:04:45,865 p=53910 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:04:45,872 p=53910 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:04:46,113 p=53910 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:04:46,140 p=53910 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:04:46,191 p=53910 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:04:47,659 p=53910 u=trainer |  ok: [centos1]
+2018-04-04 03:04:58,732 p=53910 u=trainer |  changed: [centos2]
+2018-04-04 03:04:59,687 p=53910 u=trainer |  changed: [centos3]
+2018-04-04 03:04:59,693 p=53910 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:04:59,950 p=53910 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:04:59,981 p=53910 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:05:00,085 p=53910 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:05:01,855 p=53910 u=trainer |  ok: [centos1]
+2018-04-04 03:06:08,190 p=53910 u=trainer |  changed: [centos2]
+2018-04-04 03:06:11,398 p=53910 u=trainer |  changed: [centos3]
+2018-04-04 03:06:11,405 p=53910 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:06:11,578 p=53910 u=trainer |  skipping: [centos1]
+2018-04-04 03:06:11,579 p=53910 u=trainer |  skipping: [centos2]
+2018-04-04 03:06:11,587 p=53910 u=trainer |  skipping: [centos3]
+2018-04-04 03:06:11,640 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:06:11,640 p=53910 u=trainer |  fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:06:11,704 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:06:11,705 p=53910 u=trainer |  fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:06:11,708 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default
+2018-04-04 03:06:11,708 p=53910 u=trainer |  fatal: [ubuntu3]: FAILED! => {"changed": false, "msg": "Could not find or access 'ubuntu_default'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/ubuntu_default\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/ubuntu_default"}
+2018-04-04 03:06:11,714 p=53910 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:06:11,826 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf
+2018-04-04 03:06:11,827 p=53910 u=trainer |  fatal: [centos1]: FAILED! => {"changed": false, "msg": "Could not find or access 'centos_default.conf'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf"}
+2018-04-04 03:06:11,859 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf
+2018-04-04 03:06:11,860 p=53910 u=trainer |  fatal: [centos2]: FAILED! => {"changed": false, "msg": "Could not find or access 'centos_default.conf'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf"}
+2018-04-04 03:06:11,883 p=53910 u=trainer |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: 	/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf
+2018-04-04 03:06:11,883 p=53910 u=trainer |  fatal: [centos3]: FAILED! => {"changed": false, "msg": "Could not find or access 'centos_default.conf'\nSearched in:\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/files/centos_default.conf\n\t/home/trainer/Desktop/day3/centos-sshd-passwordless/centos_default.conf"}
+2018-04-04 03:06:11,885 p=53910 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_webserverconfigs.retry
+
+2018-04-04 03:06:11,885 p=53910 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:06:11,885 p=53910 u=trainer |  centos1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 03:06:11,885 p=53910 u=trainer |  centos2                    : ok=3    changed=2    unreachable=0    failed=1   
+2018-04-04 03:06:11,886 p=53910 u=trainer |  centos3                    : ok=3    changed=2    unreachable=0    failed=1   
+2018-04-04 03:06:11,886 p=53910 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:06:11,886 p=53910 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:06:11,886 p=53910 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 03:07:40,534 p=55309 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:07:40,546 p=55309 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:07:42,966 p=55309 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:07:43,030 p=55309 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:07:44,009 p=55309 u=trainer |  ok: [centos3]
+2018-04-04 03:07:44,112 p=55309 u=trainer |  ok: [centos1]
+2018-04-04 03:07:44,142 p=55309 u=trainer |  ok: [centos2]
+2018-04-04 03:07:44,288 p=55309 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:07:44,295 p=55309 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:07:44,436 p=55309 u=trainer |  skipping: [centos1]
+2018-04-04 03:07:44,436 p=55309 u=trainer |  skipping: [centos2]
+2018-04-04 03:07:44,437 p=55309 u=trainer |  skipping: [centos3]
+2018-04-04 03:07:55,586 p=55309 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:07:56,189 p=55309 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:07:56,195 p=55309 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:07:56,201 p=55309 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:07:56,465 p=55309 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:07:56,473 p=55309 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:07:56,528 p=55309 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:07:58,280 p=55309 u=trainer |  ok: [centos3]
+2018-04-04 03:07:58,285 p=55309 u=trainer |  ok: [centos1]
+2018-04-04 03:07:58,289 p=55309 u=trainer |  ok: [centos2]
+2018-04-04 03:07:58,295 p=55309 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:07:58,569 p=55309 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:07:58,593 p=55309 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:07:58,672 p=55309 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:08:00,460 p=55309 u=trainer |  ok: [centos1]
+2018-04-04 03:08:00,803 p=55309 u=trainer |  ok: [centos2]
+2018-04-04 03:08:00,846 p=55309 u=trainer |  ok: [centos3]
+2018-04-04 03:08:00,852 p=55309 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:08:01,041 p=55309 u=trainer |  skipping: [centos1]
+2018-04-04 03:08:01,041 p=55309 u=trainer |  skipping: [centos2]
+2018-04-04 03:08:01,042 p=55309 u=trainer |  skipping: [centos3]
+2018-04-04 03:08:02,730 p=55309 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:08:02,739 p=55309 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:08:02,743 p=55309 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:08:02,751 p=55309 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:08:03,004 p=55309 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:08:03,062 p=55309 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:08:03,163 p=55309 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:08:04,157 p=55309 u=trainer |  ok: [centos1]
+2018-04-04 03:08:04,596 p=55309 u=trainer |  ok: [centos3]
+2018-04-04 03:08:04,602 p=55309 u=trainer |  ok: [centos2]
+2018-04-04 03:08:04,608 p=55309 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:08:06,223 p=55309 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:08:06,223 p=55309 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:08:06,236 p=55309 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:08:06,386 p=55309 u=trainer |  changed: [centos3]
+2018-04-04 03:08:06,392 p=55309 u=trainer |  changed: [centos1]
+2018-04-04 03:08:06,404 p=55309 u=trainer |  changed: [centos2]
+2018-04-04 03:08:06,751 p=55309 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:08:06,758 p=55309 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:08:07,008 p=55309 u=trainer |  fatal: [centos1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,013 p=55309 u=trainer |  fatal: [centos2]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,037 p=55309 u=trainer |  fatal: [centos3]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,075 p=55309 u=trainer |  fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,102 p=55309 u=trainer |  fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,116 p=55309 u=trainer |  fatal: [ubuntu3]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'provisioner_tool' is undefined"}
+2018-04-04 03:08:07,126 p=55309 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_webserverconfigs.retry
+
+2018-04-04 03:08:07,127 p=55309 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:08:07,127 p=55309 u=trainer |  centos1                    : ok=5    changed=1    unreachable=0    failed=1   
+2018-04-04 03:08:07,127 p=55309 u=trainer |  centos2                    : ok=5    changed=1    unreachable=0    failed=1   
+2018-04-04 03:08:07,127 p=55309 u=trainer |  centos3                    : ok=5    changed=1    unreachable=0    failed=1   
+2018-04-04 03:08:07,127 p=55309 u=trainer |  ubuntu1                    : ok=4    changed=1    unreachable=0    failed=1   
+2018-04-04 03:08:07,127 p=55309 u=trainer |  ubuntu2                    : ok=4    changed=1    unreachable=0    failed=1   
+2018-04-04 03:08:07,128 p=55309 u=trainer |  ubuntu3                    : ok=4    changed=1    unreachable=0    failed=1   
+2018-04-04 03:09:46,005 p=56930 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:09:46,016 p=56930 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:09:48,480 p=56930 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:09:48,528 p=56930 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:09:49,769 p=56930 u=trainer |  ok: [centos3]
+2018-04-04 03:09:49,779 p=56930 u=trainer |  ok: [centos1]
+2018-04-04 03:09:49,798 p=56930 u=trainer |  ok: [centos2]
+2018-04-04 03:09:49,945 p=56930 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:09:49,960 p=56930 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:09:50,120 p=56930 u=trainer |  skipping: [centos1]
+2018-04-04 03:09:50,121 p=56930 u=trainer |  skipping: [centos2]
+2018-04-04 03:09:50,126 p=56930 u=trainer |  skipping: [centos3]
+2018-04-04 03:09:59,546 p=56930 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:09:59,683 p=56930 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:10:00,096 p=56930 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:10:00,102 p=56930 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:10:00,345 p=56930 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:10:00,388 p=56930 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:10:00,431 p=56930 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:10:02,279 p=56930 u=trainer |  ok: [centos2]
+2018-04-04 03:10:02,286 p=56930 u=trainer |  ok: [centos3]
+2018-04-04 03:10:02,291 p=56930 u=trainer |  ok: [centos1]
+2018-04-04 03:10:02,298 p=56930 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:10:02,564 p=56930 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:10:02,587 p=56930 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:10:02,659 p=56930 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:10:04,506 p=56930 u=trainer |  ok: [centos1]
+2018-04-04 03:10:04,774 p=56930 u=trainer |  ok: [centos3]
+2018-04-04 03:10:04,777 p=56930 u=trainer |  ok: [centos2]
+2018-04-04 03:10:04,783 p=56930 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:10:04,930 p=56930 u=trainer |  skipping: [centos1]
+2018-04-04 03:10:04,973 p=56930 u=trainer |  skipping: [centos2]
+2018-04-04 03:10:04,987 p=56930 u=trainer |  skipping: [centos3]
+2018-04-04 03:10:06,480 p=56930 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:10:06,511 p=56930 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:10:06,526 p=56930 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:10:06,532 p=56930 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:10:06,810 p=56930 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:10:06,824 p=56930 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:10:06,920 p=56930 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:10:07,899 p=56930 u=trainer |  ok: [centos1]
+2018-04-04 03:10:08,201 p=56930 u=trainer |  ok: [centos2]
+2018-04-04 03:10:08,217 p=56930 u=trainer |  ok: [centos3]
+2018-04-04 03:10:08,222 p=56930 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:10:09,449 p=56930 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:10:09,450 p=56930 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:10:09,537 p=56930 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:10:09,809 p=56930 u=trainer |  changed: [centos3]
+2018-04-04 03:10:09,820 p=56930 u=trainer |  changed: [centos1]
+2018-04-04 03:10:09,837 p=56930 u=trainer |  changed: [centos2]
+2018-04-04 03:10:10,053 p=56930 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:10:10,059 p=56930 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:10:12,130 p=56930 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:10:12,131 p=56930 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:10:12,535 p=56930 u=trainer |  changed: [centos1]
+2018-04-04 03:10:12,715 p=56930 u=trainer |  changed: [centos3]
+2018-04-04 03:10:12,716 p=56930 u=trainer |  changed: [centos2]
+2018-04-04 03:10:13,135 p=56930 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:10:13,151 p=56930 u=trainer |  TASK [Restart nginx] ***********************************************************************************************************************
+2018-04-04 03:10:14,360 p=56930 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:10:14,687 p=56930 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:10:15,391 p=56930 u=trainer |  changed: [centos2]
+2018-04-04 03:10:15,400 p=56930 u=trainer |  changed: [centos1]
+2018-04-04 03:10:15,400 p=56930 u=trainer |  changed: [centos3]
+2018-04-04 03:10:15,406 p=56930 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:10:15,408 p=56930 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:10:15,408 p=56930 u=trainer |  centos1                    : ok=7    changed=3    unreachable=0    failed=0   
+2018-04-04 03:10:15,408 p=56930 u=trainer |  centos2                    : ok=7    changed=3    unreachable=0    failed=0   
+2018-04-04 03:10:15,408 p=56930 u=trainer |  centos3                    : ok=7    changed=3    unreachable=0    failed=0   
+2018-04-04 03:10:15,408 p=56930 u=trainer |  ubuntu1                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:10:15,409 p=56930 u=trainer |  ubuntu2                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:10:15,409 p=56930 u=trainer |  ubuntu3                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:20:56,740 p=60946 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:20:56,800 p=60946 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:20:59,691 p=60946 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:20:59,696 p=60946 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:21:00,974 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:01,043 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:01,082 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:01,258 p=60946 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:21:01,273 p=60946 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:21:01,420 p=60946 u=trainer |  skipping: [centos1]
+2018-04-04 03:21:01,421 p=60946 u=trainer |  skipping: [centos2]
+2018-04-04 03:21:01,421 p=60946 u=trainer |  skipping: [centos3]
+2018-04-04 03:21:11,099 p=60946 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:21:11,324 p=60946 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:21:12,186 p=60946 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:21:12,197 p=60946 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:21:12,482 p=60946 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:21:12,495 p=60946 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:21:12,538 p=60946 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:21:14,089 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:14,304 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:14,309 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:14,315 p=60946 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:21:14,586 p=60946 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:21:14,603 p=60946 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:21:14,673 p=60946 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:21:16,646 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:16,650 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:16,772 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:16,785 p=60946 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:21:16,943 p=60946 u=trainer |  skipping: [centos1]
+2018-04-04 03:21:16,943 p=60946 u=trainer |  skipping: [centos2]
+2018-04-04 03:21:16,958 p=60946 u=trainer |  skipping: [centos3]
+2018-04-04 03:21:18,646 p=60946 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:21:18,659 p=60946 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:21:18,673 p=60946 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:21:18,681 p=60946 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:21:18,976 p=60946 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:21:19,012 p=60946 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:21:19,064 p=60946 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:21:20,089 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:20,365 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:20,489 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:20,501 p=60946 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:21:22,072 p=60946 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:21:22,073 p=60946 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:21:22,095 p=60946 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:21:22,238 p=60946 u=trainer |  changed: [centos3]
+2018-04-04 03:21:22,243 p=60946 u=trainer |  changed: [centos2]
+2018-04-04 03:21:22,247 p=60946 u=trainer |  changed: [centos1]
+2018-04-04 03:21:22,587 p=60946 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:21:22,593 p=60946 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:21:24,816 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:24,832 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:25,009 p=60946 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:21:25,019 p=60946 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:21:25,031 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:25,527 p=60946 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:21:25,534 p=60946 u=trainer |  TASK [Restart nginx] ***********************************************************************************************************************
+2018-04-04 03:21:27,229 p=60946 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:21:27,278 p=60946 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:21:27,749 p=60946 u=trainer |  ok: [centos1]
+2018-04-04 03:21:27,753 p=60946 u=trainer |  ok: [centos3]
+2018-04-04 03:21:27,757 p=60946 u=trainer |  ok: [centos2]
+2018-04-04 03:21:28,029 p=60946 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:21:28,034 p=60946 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:21:28,035 p=60946 u=trainer |  centos1                    : ok=7    changed=1    unreachable=0    failed=0   
+2018-04-04 03:21:28,035 p=60946 u=trainer |  centos2                    : ok=7    changed=1    unreachable=0    failed=0   
+2018-04-04 03:21:28,035 p=60946 u=trainer |  centos3                    : ok=7    changed=1    unreachable=0    failed=0   
+2018-04-04 03:21:28,035 p=60946 u=trainer |  ubuntu1                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:21:28,035 p=60946 u=trainer |  ubuntu2                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:21:28,035 p=60946 u=trainer |  ubuntu3                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:24:17,481 p=63155 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:24:17,536 p=63155 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:24:20,012 p=63155 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:24:20,040 p=63155 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:24:21,123 p=63155 u=trainer |  ok: [centos1]
+2018-04-04 03:24:21,172 p=63155 u=trainer |  ok: [centos3]
+2018-04-04 03:24:21,184 p=63155 u=trainer |  ok: [centos2]
+2018-04-04 03:24:21,336 p=63155 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:24:21,343 p=63155 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:24:21,446 p=63155 u=trainer |  skipping: [centos1]
+2018-04-04 03:24:21,501 p=63155 u=trainer |  skipping: [centos2]
+2018-04-04 03:24:21,502 p=63155 u=trainer |  skipping: [centos3]
+2018-04-04 03:24:29,253 p=63155 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:24:30,672 p=63155 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:24:31,499 p=63155 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:24:31,505 p=63155 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:24:31,734 p=63155 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:24:31,748 p=63155 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:24:31,827 p=63155 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:24:33,586 p=63155 u=trainer |  ok: [centos3]
+2018-04-04 03:24:33,590 p=63155 u=trainer |  ok: [centos1]
+2018-04-04 03:24:33,599 p=63155 u=trainer |  ok: [centos2]
+2018-04-04 03:24:33,605 p=63155 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:24:33,854 p=63155 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:24:33,869 p=63155 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:24:33,969 p=63155 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:24:36,201 p=63155 u=trainer |  ok: [centos1]
+2018-04-04 03:24:36,227 p=63155 u=trainer |  ok: [centos2]
+2018-04-04 03:24:36,277 p=63155 u=trainer |  ok: [centos3]
+2018-04-04 03:24:36,286 p=63155 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:24:36,463 p=63155 u=trainer |  skipping: [centos1]
+2018-04-04 03:24:36,464 p=63155 u=trainer |  skipping: [centos2]
+2018-04-04 03:24:36,464 p=63155 u=trainer |  skipping: [centos3]
+2018-04-04 03:24:38,244 p=63155 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:24:38,248 p=63155 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:24:38,253 p=63155 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:24:38,259 p=63155 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:24:38,525 p=63155 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:24:38,545 p=63155 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:24:38,606 p=63155 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:24:40,438 p=63155 u=trainer |  changed: [centos2]
+2018-04-04 03:24:40,446 p=63155 u=trainer |  changed: [centos1]
+2018-04-04 03:24:40,450 p=63155 u=trainer |  changed: [centos3]
+2018-04-04 03:24:40,463 p=63155 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:24:42,339 p=63155 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:24:42,339 p=63155 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:24:42,366 p=63155 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:24:42,701 p=63155 u=trainer |  changed: [centos1]
+2018-04-04 03:24:42,707 p=63155 u=trainer |  changed: [centos3]
+2018-04-04 03:24:42,711 p=63155 u=trainer |  changed: [centos2]
+2018-04-04 03:24:42,971 p=63155 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:24:42,980 p=63155 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:24:45,022 p=63155 u=trainer |  ok: [centos1]
+2018-04-04 03:24:45,293 p=63155 u=trainer |  ok: [centos2]
+2018-04-04 03:24:46,032 p=63155 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:24:46,038 p=63155 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:24:46,101 p=63155 u=trainer |  ok: [centos3]
+2018-04-04 03:24:46,478 p=63155 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:24:46,488 p=63155 u=trainer |  TASK [Restart nginx] ***********************************************************************************************************************
+2018-04-04 03:24:48,179 p=63155 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:24:48,196 p=63155 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:24:48,533 p=63155 u=trainer |  ok: [centos1]
+2018-04-04 03:24:48,536 p=63155 u=trainer |  ok: [centos3]
+2018-04-04 03:24:48,539 p=63155 u=trainer |  ok: [centos2]
+2018-04-04 03:24:48,872 p=63155 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:24:48,878 p=63155 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:24:48,878 p=63155 u=trainer |  centos1                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:24:48,878 p=63155 u=trainer |  centos2                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:24:48,878 p=63155 u=trainer |  centos3                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:24:48,879 p=63155 u=trainer |  ubuntu1                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:24:48,879 p=63155 u=trainer |  ubuntu2                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:24:48,879 p=63155 u=trainer |  ubuntu3                    : ok=6    changed=1    unreachable=0    failed=0   
+2018-04-04 03:27:52,647 p=65331 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:27:52,658 p=65331 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:27:55,680 p=65331 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:27:55,719 p=65331 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:27:56,930 p=65331 u=trainer |  ok: [centos2]
+2018-04-04 03:27:57,066 p=65331 u=trainer |  ok: [centos1]
+2018-04-04 03:27:57,094 p=65331 u=trainer |  ok: [centos3]
+2018-04-04 03:27:57,165 p=65331 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:27:57,173 p=65331 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:27:57,323 p=65331 u=trainer |  skipping: [centos1]
+2018-04-04 03:27:57,323 p=65331 u=trainer |  skipping: [centos2]
+2018-04-04 03:27:57,324 p=65331 u=trainer |  skipping: [centos3]
+2018-04-04 03:28:08,853 p=65331 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:28:08,878 p=65331 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:28:09,391 p=65331 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:28:09,397 p=65331 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:28:09,601 p=65331 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:28:09,613 p=65331 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:28:09,642 p=65331 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:28:11,066 p=65331 u=trainer |  ok: [centos1]
+2018-04-04 03:28:11,070 p=65331 u=trainer |  ok: [centos3]
+2018-04-04 03:28:11,073 p=65331 u=trainer |  ok: [centos2]
+2018-04-04 03:28:11,080 p=65331 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:28:11,269 p=65331 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:28:11,291 p=65331 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:28:11,357 p=65331 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:28:13,260 p=65331 u=trainer |  ok: [centos2]
+2018-04-04 03:28:13,269 p=65331 u=trainer |  ok: [centos1]
+2018-04-04 03:28:13,282 p=65331 u=trainer |  ok: [centos3]
+2018-04-04 03:28:13,289 p=65331 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:28:13,338 p=65331 u=trainer |  skipping: [centos1]
+2018-04-04 03:28:13,383 p=65331 u=trainer |  skipping: [centos2]
+2018-04-04 03:28:13,425 p=65331 u=trainer |  skipping: [centos3]
+2018-04-04 03:28:14,940 p=65331 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:28:14,944 p=65331 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:28:14,947 p=65331 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:28:14,959 p=65331 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:28:15,236 p=65331 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:28:15,262 p=65331 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:28:15,321 p=65331 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:28:16,332 p=65331 u=trainer |  ok: [centos1]
+2018-04-04 03:28:16,680 p=65331 u=trainer |  ok: [centos2]
+2018-04-04 03:28:16,683 p=65331 u=trainer |  ok: [centos3]
+2018-04-04 03:28:16,690 p=65331 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:28:18,147 p=65331 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:28:18,147 p=65331 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:28:18,182 p=65331 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:28:18,523 p=65331 u=trainer |  changed: [centos1]
+2018-04-04 03:28:18,541 p=65331 u=trainer |  changed: [centos2]
+2018-04-04 03:28:18,570 p=65331 u=trainer |  changed: [centos3]
+2018-04-04 03:28:18,736 p=65331 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:28:18,742 p=65331 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:28:20,441 p=65331 u=trainer |  ok: [centos1]
+2018-04-04 03:28:21,309 p=65331 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:28:21,426 p=65331 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:28:21,523 p=65331 u=trainer |  ok: [centos3]
+2018-04-04 03:28:21,537 p=65331 u=trainer |  ok: [centos2]
+2018-04-04 03:28:21,890 p=65331 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:28:21,897 p=65331 u=trainer |  TASK [Restart nginx] ***********************************************************************************************************************
+2018-04-04 03:28:23,569 p=65331 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:28:23,579 p=65331 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:28:24,385 p=65331 u=trainer |  changed: [centos3]
+2018-04-04 03:28:24,402 p=65331 u=trainer |  changed: [centos1]
+2018-04-04 03:28:24,410 p=65331 u=trainer |  changed: [centos2]
+2018-04-04 03:28:24,447 p=65331 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:28:24,451 p=65331 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:28:24,451 p=65331 u=trainer |  centos1                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:28:24,451 p=65331 u=trainer |  centos2                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:28:24,451 p=65331 u=trainer |  centos3                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:28:24,451 p=65331 u=trainer |  ubuntu1                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 03:28:24,451 p=65331 u=trainer |  ubuntu2                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 03:28:24,452 p=65331 u=trainer |  ubuntu3                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:01,393 p=67670 u=trainer |  ERROR! the playbook: playbook_webserverconfigs. could not be found
+2018-04-04 03:34:05,751 p=67678 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 03:34:05,760 p=67678 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 03:34:08,095 p=67678 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:34:08,456 p=67678 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:34:09,577 p=67678 u=trainer |  ok: [centos3]
+2018-04-04 03:34:09,622 p=67678 u=trainer |  ok: [centos1]
+2018-04-04 03:34:09,632 p=67678 u=trainer |  ok: [centos2]
+2018-04-04 03:34:09,637 p=67678 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:34:09,643 p=67678 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 03:34:09,823 p=67678 u=trainer |  skipping: [centos1]
+2018-04-04 03:34:09,823 p=67678 u=trainer |  skipping: [centos2]
+2018-04-04 03:34:09,824 p=67678 u=trainer |  skipping: [centos3]
+2018-04-04 03:34:20,226 p=67678 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:34:20,816 p=67678 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:34:21,338 p=67678 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:34:21,348 p=67678 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 03:34:21,686 p=67678 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:34:21,695 p=67678 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:34:21,752 p=67678 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:34:23,496 p=67678 u=trainer |  ok: [centos3]
+2018-04-04 03:34:23,506 p=67678 u=trainer |  ok: [centos1]
+2018-04-04 03:34:23,511 p=67678 u=trainer |  ok: [centos2]
+2018-04-04 03:34:23,523 p=67678 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 03:34:23,872 p=67678 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:34:23,894 p=67678 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:34:23,969 p=67678 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:34:26,214 p=67678 u=trainer |  ok: [centos1]
+2018-04-04 03:34:26,485 p=67678 u=trainer |  ok: [centos2]
+2018-04-04 03:34:26,543 p=67678 u=trainer |  ok: [centos3]
+2018-04-04 03:34:26,550 p=67678 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 03:34:26,793 p=67678 u=trainer |  skipping: [centos1]
+2018-04-04 03:34:26,793 p=67678 u=trainer |  skipping: [centos2]
+2018-04-04 03:34:26,794 p=67678 u=trainer |  skipping: [centos3]
+2018-04-04 03:34:28,893 p=67678 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:34:28,901 p=67678 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:34:28,905 p=67678 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:34:28,913 p=67678 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 03:34:29,202 p=67678 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:34:29,227 p=67678 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:34:29,315 p=67678 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:34:30,811 p=67678 u=trainer |  ok: [centos1]
+2018-04-04 03:34:31,066 p=67678 u=trainer |  ok: [centos2]
+2018-04-04 03:34:31,072 p=67678 u=trainer |  ok: [centos3]
+2018-04-04 03:34:31,078 p=67678 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 03:34:32,707 p=67678 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 03:34:32,707 p=67678 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:34:32,729 p=67678 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:34:32,876 p=67678 u=trainer |  changed: [centos1]
+2018-04-04 03:34:32,893 p=67678 u=trainer |  changed: [centos3]
+2018-04-04 03:34:32,896 p=67678 u=trainer |  changed: [centos2]
+2018-04-04 03:34:33,227 p=67678 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:34:33,233 p=67678 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 03:34:35,273 p=67678 u=trainer |  ok: [centos2]
+2018-04-04 03:34:35,342 p=67678 u=trainer |  ok: [centos1]
+2018-04-04 03:34:35,942 p=67678 u=trainer |  ok: [ubuntu1]
+2018-04-04 03:34:35,943 p=67678 u=trainer |  ok: [ubuntu2]
+2018-04-04 03:34:35,995 p=67678 u=trainer |  ok: [centos3]
+2018-04-04 03:34:36,313 p=67678 u=trainer |  ok: [ubuntu3]
+2018-04-04 03:34:36,319 p=67678 u=trainer |  TASK [Restart nginx on Ubuntu] *************************************************************************************************************
+2018-04-04 03:34:36,474 p=67678 u=trainer |  skipping: [centos1]
+2018-04-04 03:34:36,474 p=67678 u=trainer |  skipping: [centos3]
+2018-04-04 03:34:36,475 p=67678 u=trainer |  skipping: [centos2]
+2018-04-04 03:34:38,139 p=67678 u=trainer |  changed: [ubuntu1]
+2018-04-04 03:34:38,312 p=67678 u=trainer |  changed: [ubuntu3]
+2018-04-04 03:34:38,343 p=67678 u=trainer |  changed: [ubuntu2]
+2018-04-04 03:34:38,349 p=67678 u=trainer |  TASK [Restart nginx on CentOS] *************************************************************************************************************
+2018-04-04 03:34:38,544 p=67678 u=trainer |  skipping: [ubuntu1]
+2018-04-04 03:34:38,560 p=67678 u=trainer |  skipping: [ubuntu2]
+2018-04-04 03:34:38,583 p=67678 u=trainer |  skipping: [ubuntu3]
+2018-04-04 03:34:39,763 p=67678 u=trainer |  changed: [centos3]
+2018-04-04 03:34:40,016 p=67678 u=trainer |  changed: [centos2]
+2018-04-04 03:34:40,021 p=67678 u=trainer |  changed: [centos1]
+2018-04-04 03:34:40,023 p=67678 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 03:34:40,023 p=67678 u=trainer |  centos1                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:40,023 p=67678 u=trainer |  centos2                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:40,023 p=67678 u=trainer |  centos3                    : ok=7    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:40,023 p=67678 u=trainer |  ubuntu1                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:40,024 p=67678 u=trainer |  ubuntu2                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 03:34:40,024 p=67678 u=trainer |  ubuntu3                    : ok=6    changed=2    unreachable=0    failed=0   

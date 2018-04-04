@@ -2,25 +2,28 @@
   hosts: all
   become: yes
   become_method: su
+  vars:
+   - provisioner_tool: Docker
+   - automation_tool: Ansible 
   tasks: 
    - name: Install nginx on UBuntuOS
      apt: name=nginx update_cache=yes state=present
      when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
 
    - name: Install epel-release on CEntOS
-     apt: name=epel-release state=present
+     yum: name=epel-release state=present
      when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
 
    - name: Install nginx on centOS
-     apt: name=nginx update_cache=yes state=present
+     yum: name=nginx update_cache=yes state=present
      when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
 
    - name: Configure nginx on UbuntuOS
-     copy: src=ubuntu_default dest=/etc/nginx/sites-availables/default
+     copy: src=ubuntu_default dest=/etc/nginx/sites-available/default
      when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
 
    - name: Configure nginx on CEntOS
-     copy: src=centos_default dest=/etc/nginx/sites-availables/default
+     copy: src=centos_default.conf dest=/etc/nginx/conf.d/default.conf
      when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
  
    - name: Create custom web page in nginx
@@ -29,5 +32,10 @@
    - name: Deploy webpage i nnginx
      template: src=index.html.j2 dest=/var/html/index.html
  
-   - name: Restart nginx
-     service: name=nginx state=started
+   - name: Restart nginx on Ubuntu
+     shell: "/etc/init.d/nginx restart"
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+   - name: Restart nginx on CentOS
+     service: name=nginx state=restarted
+     when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+
