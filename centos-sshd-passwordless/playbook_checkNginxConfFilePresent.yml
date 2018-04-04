@@ -1,0 +1,26 @@
+- name: Check wether nginx conf file is present in ubuntu and centOS systems
+  hosts: all
+  become: yes
+  become_method: su
+  tasks:
+   - name: Find the File in ubuntuOS
+     find:
+       paths: /etc/nginx/sites-available
+       patterns: "defaulsss"
+     register: res
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+
+   - name: File found in ubuntu
+     debug: msg="{{ res }}" 
+     when: (res.matched == 1)   
+
+   - name: Find the File in centOS
+     find:
+       paths: /etc/nginx/conf.d/
+       patterns: "default.conf"
+     register: res
+     when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+
+   - name: FIle found in centos
+     debug:  msg="nginx conf present in centos"
+     when: (res.matched == 1 and ansible_os_family == "RedHat" and ansible_distribution == "CentOS")  

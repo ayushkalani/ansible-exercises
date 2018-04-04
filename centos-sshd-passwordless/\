@@ -1,0 +1,15 @@
+--- 
+- name: This Playbook will demo the use of pre and post tasks"
+  hosts: all
+  become: yes
+  become_method: su
+  pre_tasks:
+   - name: Exce the pre tasks here
+     debug: msg="pre"
+  tasks:
+   - name: Regular tasks will go here
+     debug: msg="task"
+  post_tasks:
+   - debug: 
+      msg: "This task will be execute at the end:"         
+

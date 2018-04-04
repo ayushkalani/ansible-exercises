@@ -1,0 +1,12 @@
+- name: Demo ansible loops
+  hosts: all
+  vars:
+   - packages:
+        - vim
+        - tree
+        - curl
+
+  tasks: 
+   - name: Install thge software packs
+     apt: name="{{item}}" update_cache=yes state=present
+     with_items: "{{packages}}"

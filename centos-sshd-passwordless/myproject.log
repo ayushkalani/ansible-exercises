@@ -5289,3 +5289,1770 @@ name: This playbook will coinfigure and deploy webpages onubuntu and centos serv
 2018-04-04 03:34:40,023 p=67678 u=trainer |  ubuntu1                    : ok=6    changed=2    unreachable=0    failed=0   
 2018-04-04 03:34:40,024 p=67678 u=trainer |  ubuntu2                    : ok=6    changed=2    unreachable=0    failed=0   
 2018-04-04 03:34:40,024 p=67678 u=trainer |  ubuntu3                    : ok=6    changed=2    unreachable=0    failed=0   
+2018-04-04 04:59:24,835 p=71523 u=trainer |  playbook: playbook_preandposttask.yml
+2018-04-04 05:02:14,560 p=71664 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 05:02:14,922 p=71664 u=trainer |  PLAY [This Playbook will demo the use of pre and post tasks"] ******************************************************************************
+2018-04-04 05:02:14,932 p=71664 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 05:02:17,598 p=71664 u=trainer |  ok: [ubuntu1]
+2018-04-04 05:02:17,624 p=71664 u=trainer |  ok: [ubuntu2]
+2018-04-04 05:02:18,613 p=71664 u=trainer |  ok: [centos3]
+2018-04-04 05:02:18,621 p=71664 u=trainer |  ok: [centos1]
+2018-04-04 05:02:18,706 p=71664 u=trainer |  ok: [centos2]
+2018-04-04 05:02:18,950 p=71664 u=trainer |  ok: [ubuntu3]
+2018-04-04 05:02:18,975 p=71664 u=trainer |  TASK [Exce the pre tasks here] *************************************************************************************************************
+2018-04-04 05:02:19,192 p=71664 u=trainer |  ok: [centos1] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,192 p=71664 u=trainer |  ok: [centos2] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,220 p=71664 u=trainer |  ok: [centos3] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,267 p=71664 u=trainer |  ok: [ubuntu1] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,279 p=71664 u=trainer |  ok: [ubuntu2] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,316 p=71664 u=trainer |  ok: [ubuntu3] => {
+    "msg": "pre"
+}
+2018-04-04 05:02:19,328 p=71664 u=trainer |  TASK [Regular tasks will go here] **********************************************************************************************************
+2018-04-04 05:02:19,526 p=71664 u=trainer |  ok: [centos1] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,527 p=71664 u=trainer |  ok: [centos2] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,548 p=71664 u=trainer |  ok: [centos3] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,590 p=71664 u=trainer |  ok: [ubuntu1] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,620 p=71664 u=trainer |  ok: [ubuntu2] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,643 p=71664 u=trainer |  ok: [ubuntu3] => {
+    "msg": "task"
+}
+2018-04-04 05:02:19,649 p=71664 u=trainer |  TASK [debug] *******************************************************************************************************************************
+2018-04-04 05:02:19,804 p=71664 u=trainer |  ok: [centos1] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,877 p=71664 u=trainer |  ok: [centos2] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,889 p=71664 u=trainer |  ok: [centos3] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,918 p=71664 u=trainer |  ok: [ubuntu1] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,935 p=71664 u=trainer |  ok: [ubuntu2] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,975 p=71664 u=trainer |  ok: [ubuntu3] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:02:19,976 p=71664 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 05:02:19,977 p=71664 u=trainer |  centos1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:02:19,977 p=71664 u=trainer |  centos2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:02:19,977 p=71664 u=trainer |  centos3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:02:19,977 p=71664 u=trainer |  ubuntu1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:02:19,977 p=71664 u=trainer |  ubuntu2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:02:19,977 p=71664 u=trainer |  ubuntu3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:20,147 p=72038 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 05:06:20,347 p=72038 u=trainer |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml': line 10, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+   - name: Regular tasks will go here
+     ^ here
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml': line 10, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+   - name: Regular tasks will go here
+     ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml': line 10, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+   - name: Regular tasks will go here
+     ^ here
+
+2018-04-04 05:06:37,192 p=72056 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 05:06:37,493 p=72056 u=trainer |  PLAY [This Playbook will demo the use of pre and post tasks"] ******************************************************************************
+2018-04-04 05:06:37,503 p=72056 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 05:06:39,129 p=72056 u=trainer |  ok: [ubuntu2]
+2018-04-04 05:06:39,146 p=72056 u=trainer |  ok: [ubuntu1]
+2018-04-04 05:06:39,300 p=72056 u=trainer |   [ERROR]: User interrupted execution
+
+2018-04-04 05:06:42,981 p=72185 u=trainer |  ansible-playbook 2.4.2.0
+  config file = /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /bin/ansible-playbook
+  python version = 2.7.5 (default, Aug  4 2017, 00:39:18) [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+2018-04-04 05:06:42,982 p=72185 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 05:06:43,315 p=72185 u=trainer |  PLAYBOOK: playbook_preandposttask.yml ******************************************************************************************************
+2018-04-04 05:06:43,315 p=72185 u=trainer |  1 plays in playbook_preandposttask.yml
+2018-04-04 05:06:43,351 p=72185 u=trainer |  PLAY [This Playbook will demo the use of pre and post tasks"] ******************************************************************************
+2018-04-04 05:06:43,369 p=72185 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 05:06:45,958 p=72185 u=trainer |  ok: [ubuntu1]
+2018-04-04 05:06:45,976 p=72185 u=trainer |  ok: [ubuntu2]
+2018-04-04 05:06:47,202 p=72185 u=trainer |  ok: [centos3]
+2018-04-04 05:06:47,212 p=72185 u=trainer |  ok: [centos1]
+2018-04-04 05:06:47,229 p=72185 u=trainer |  ok: [centos2]
+2018-04-04 05:06:47,280 p=72185 u=trainer |  ok: [ubuntu3]
+2018-04-04 05:06:47,288 p=72185 u=trainer |  TASK [Exce the pre tasks here] *************************************************************************************************************
+2018-04-04 05:06:47,288 p=72185 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml:7
+2018-04-04 05:06:47,532 p=72185 u=trainer |  ok: [centos1] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,533 p=72185 u=trainer |  ok: [centos2] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,533 p=72185 u=trainer |  ok: [centos3] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,593 p=72185 u=trainer |  ok: [ubuntu1] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,655 p=72185 u=trainer |  ok: [ubuntu2] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,659 p=72185 u=trainer |  ok: [ubuntu3] => {
+    "msg": "pre"
+}
+2018-04-04 05:06:47,660 p=72185 u=trainer |  META: ran handlers
+2018-04-04 05:06:47,671 p=72185 u=trainer |  TASK [Regular tasks will go here] **********************************************************************************************************
+2018-04-04 05:06:47,672 p=72185 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml:10
+2018-04-04 05:06:47,895 p=72185 u=trainer |  ok: [centos1] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,896 p=72185 u=trainer |  ok: [centos2] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,896 p=72185 u=trainer |  ok: [centos3] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,947 p=72185 u=trainer |  ok: [ubuntu1] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,976 p=72185 u=trainer |  ok: [ubuntu2] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,993 p=72185 u=trainer |  ok: [ubuntu3] => {
+    "msg": "task"
+}
+2018-04-04 05:06:47,994 p=72185 u=trainer |  META: ran handlers
+2018-04-04 05:06:48,000 p=72185 u=trainer |  TASK [debug] *******************************************************************************************************************************
+2018-04-04 05:06:48,000 p=72185 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_preandposttask.yml:13
+2018-04-04 05:06:48,287 p=72185 u=trainer |  ok: [centos1] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,289 p=72185 u=trainer |  ok: [centos2] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,315 p=72185 u=trainer |  ok: [centos3] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,340 p=72185 u=trainer |  ok: [ubuntu1] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,405 p=72185 u=trainer |  ok: [ubuntu2] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,408 p=72185 u=trainer |  ok: [ubuntu3] => {
+    "msg": "This task will be execute at the end:"
+}
+2018-04-04 05:06:48,409 p=72185 u=trainer |  META: ran handlers
+2018-04-04 05:06:48,413 p=72185 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 05:06:48,413 p=72185 u=trainer |  centos1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:48,414 p=72185 u=trainer |  centos2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:48,414 p=72185 u=trainer |  centos3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:48,414 p=72185 u=trainer |  ubuntu1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:48,414 p=72185 u=trainer |  ubuntu2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 05:06:48,414 p=72185 u=trainer |  ubuntu3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 06:17:25,317 p=73766 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+  - debug:
+  ^ here
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block mapping
+  in "<unicode string>", line 1, column 3
+did not find expected key
+  in "<unicode string>", line 13, column 3
+2018-04-04 06:17:54,564 p=73783 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+  - debug:
+  ^ here
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block mapping
+  in "<unicode string>", line 1, column 3
+did not find expected key
+  in "<unicode string>", line 13, column 3
+2018-04-04 06:22:18,140 p=73866 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+  - debug: msg="nginx file present in ubunutu"
+  ^ here
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block mapping
+  in "<unicode string>", line 1, column 3
+did not find expected key
+  in "<unicode string>", line 13, column 3
+2018-04-04 06:22:41,150 p=73884 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+     when: (ansible_os_family == "Debian" and ansible_distribution == "Ubuntu")
+  - debug: msg="nginx file present in ubunutu"
+  ^ here
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block mapping
+  in "<unicode string>", line 1, column 3
+did not find expected key
+  in "<unicode string>", line 13, column 3
+2018-04-04 06:25:07,958 p=73910 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       register: files_matched_c
+    when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+    ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes.  If starting a value with a quote, make sure the
+line ends with the same set of quotes.  For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block collection
+  in "<unicode string>", line 6, column 4
+did not find expected '-' indicator
+  in "<unicode string>", line 24, column 5
+2018-04-04 06:25:13,100 p=73920 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       register: files_matched_c
+    when: (ansible_os_family == "RedHat" and ansible_distribution == "CentOS")
+    ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes.  If starting a value with a quote, make sure the
+line ends with the same set of quotes.  For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block collection
+  in "<unicode string>", line 6, column 4
+did not find expected '-' indicator
+  in "<unicode string>", line 24, column 5
+2018-04-04 06:26:04,265 p=73962 u=trainer |  playbook: playbook_checkNginxConfFilePresent.yml
+2018-04-04 06:26:18,806 p=73976 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:26:18,829 p=73976 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:26:21,421 p=73976 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:26:21,452 p=73976 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:26:21,950 p=73976 u=trainer |  ok: [centos1]
+2018-04-04 06:26:22,231 p=73976 u=trainer |  ok: [centos3]
+2018-04-04 06:26:22,252 p=73976 u=trainer |  ok: [centos2]
+2018-04-04 06:26:22,383 p=73976 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:26:22,389 p=73976 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:26:22,470 p=73976 u=trainer |  skipping: [centos1]
+2018-04-04 06:26:22,499 p=73976 u=trainer |  skipping: [centos2]
+2018-04-04 06:26:22,555 p=73976 u=trainer |  skipping: [centos3]
+2018-04-04 06:26:23,377 p=73976 u=trainer |  fatal: [ubuntu1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (find) module: register Supported parameters include: age,age_stamp,contains,file_type,follow,get_checksum,hidden,paths,patterns,recurse,size,use_regex"}
+2018-04-04 06:26:23,382 p=73976 u=trainer |  fatal: [ubuntu2]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (find) module: register Supported parameters include: age,age_stamp,contains,file_type,follow,get_checksum,hidden,paths,patterns,recurse,size,use_regex"}
+2018-04-04 06:26:23,386 p=73976 u=trainer |  fatal: [ubuntu3]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (find) module: register Supported parameters include: age,age_stamp,contains,file_type,follow,get_checksum,hidden,paths,patterns,recurse,size,use_regex"}
+2018-04-04 06:26:23,392 p=73976 u=trainer |  TASK [File found] **************************************************************************************************************************
+2018-04-04 06:26:23,457 p=73976 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'files_matched' is undefined\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:26:23,471 p=73976 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'files_matched' is undefined\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:26:23,480 p=73976 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'files_matched' is undefined\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:26:23,482 p=73976 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:26:23,482 p=73976 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:26:23,483 p=73976 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:26:23,483 p=73976 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:26:23,483 p=73976 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:26:23,483 p=73976 u=trainer |  ubuntu1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:26:23,483 p=73976 u=trainer |  ubuntu2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:26:23,483 p=73976 u=trainer |  ubuntu3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:27:51,714 p=74387 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:27:51,724 p=74387 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:27:53,738 p=74387 u=trainer |   [ERROR]: User interrupted execution
+
+2018-04-04 06:28:47,822 p=74594 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:28:47,831 p=74594 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:28:49,763 p=74594 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:28:50,301 p=74594 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:28:51,138 p=74594 u=trainer |  ok: [centos1]
+2018-04-04 06:28:51,253 p=74594 u=trainer |  ok: [centos2]
+2018-04-04 06:28:51,273 p=74594 u=trainer |  ok: [centos3]
+2018-04-04 06:28:51,277 p=74594 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:28:51,283 p=74594 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:28:51,448 p=74594 u=trainer |  skipping: [centos1]
+2018-04-04 06:28:51,449 p=74594 u=trainer |  skipping: [centos2]
+2018-04-04 06:28:51,449 p=74594 u=trainer |  skipping: [centos3]
+2018-04-04 06:28:52,258 p=74594 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:28:52,265 p=74594 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:28:52,266 p=74594 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:28:52,271 p=74594 u=trainer |  TASK [File found] **************************************************************************************************************************
+2018-04-04 06:28:52,414 p=74594 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:28:52,415 p=74594 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:28:52,416 p=74594 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check 'files_matched.files == 1' failed. The error was: error while evaluating conditional (files_matched.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:28:52,416 p=74594 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:28:52,416 p=74594 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:28:52,417 p=74594 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:28:52,422 p=74594 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:28:52,498 p=74594 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:28:52,508 p=74594 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:28:52,539 p=74594 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:28:52,544 p=74594 u=trainer |  TASK [FIle found] **************************************************************************************************************************
+2018-04-04 06:28:52,621 p=74594 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check 'files_matched_c.files == 1' failed. The error was: error while evaluating conditional (files_matched_c.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:28:52,649 p=74594 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check 'files_matched_c.files == 1' failed. The error was: error while evaluating conditional (files_matched_c.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:28:52,649 p=74594 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check 'files_matched_c.files == 1' failed. The error was: error while evaluating conditional (files_matched_c.files == 1): 'dict object' has no attribute 'files'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:28:52,651 p=74594 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:28:52,651 p=74594 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:28:52,652 p=74594 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:28:52,652 p=74594 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:28:52,652 p=74594 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:28:52,652 p=74594 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:28:52,652 p=74594 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:28:52,652 p=74594 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:24,370 p=75107 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:36:24,381 p=75107 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:36:26,827 p=75107 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:36:27,270 p=75107 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:36:28,191 p=75107 u=trainer |  ok: [centos2]
+2018-04-04 06:36:28,357 p=75107 u=trainer |  ok: [centos3]
+2018-04-04 06:36:28,396 p=75107 u=trainer |  ok: [centos1]
+2018-04-04 06:36:28,447 p=75107 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:36:28,455 p=75107 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:36:28,635 p=75107 u=trainer |  skipping: [centos1]
+2018-04-04 06:36:28,636 p=75107 u=trainer |  skipping: [centos2]
+2018-04-04 06:36:28,636 p=75107 u=trainer |  skipping: [centos3]
+2018-04-04 06:36:29,570 p=75107 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:36:29,573 p=75107 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:36:29,577 p=75107 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:36:29,583 p=75107 u=trainer |  TASK [File found] **************************************************************************************************************************
+2018-04-04 06:36:29,735 p=75107 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:36:29,794 p=75107 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:36:29,799 p=75107 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found\n     ^ here\n"}
+2018-04-04 06:36:29,883 p=75107 u=trainer |  ok: [ubuntu1] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:36:29,900 p=75107 u=trainer |  ok: [ubuntu2] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:36:29,912 p=75107 u=trainer |  ok: [ubuntu3] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:36:29,919 p=75107 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:36:29,988 p=75107 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:36:29,992 p=75107 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:36:30,011 p=75107 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:36:30,017 p=75107 u=trainer |  TASK [FIle found] **************************************************************************************************************************
+2018-04-04 06:36:30,088 p=75107 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check 'files_matched_c.matched == 1' failed. The error was: error while evaluating conditional (files_matched_c.matched == 1): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:36:30,103 p=75107 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check 'files_matched_c.matched == 1' failed. The error was: error while evaluating conditional (files_matched_c.matched == 1): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:36:30,117 p=75107 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check 'files_matched_c.matched == 1' failed. The error was: error while evaluating conditional (files_matched_c.matched == 1): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found\n     ^ here\n"}
+2018-04-04 06:36:30,119 p=75107 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:36:30,119 p=75107 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:36:30,120 p=75107 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:30,120 p=75107 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:30,120 p=75107 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:30,120 p=75107 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:30,120 p=75107 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:36:30,120 p=75107 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:13,478 p=75537 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:38:13,487 p=75537 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:38:15,960 p=75537 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:38:15,965 p=75537 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:38:16,846 p=75537 u=trainer |  ok: [centos1]
+2018-04-04 06:38:16,853 p=75537 u=trainer |  ok: [centos2]
+2018-04-04 06:38:16,872 p=75537 u=trainer |  ok: [centos3]
+2018-04-04 06:38:17,130 p=75537 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:38:17,136 p=75537 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:38:17,326 p=75537 u=trainer |  skipping: [centos1]
+2018-04-04 06:38:17,326 p=75537 u=trainer |  skipping: [centos2]
+2018-04-04 06:38:17,326 p=75537 u=trainer |  skipping: [centos3]
+2018-04-04 06:38:18,040 p=75537 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:38:18,308 p=75537 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:38:18,312 p=75537 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:38:18,318 p=75537 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:38:18,488 p=75537 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:38:18,491 p=75537 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:38:18,491 p=75537 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: error while evaluating conditional ((files_matched.matched == 1 and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:38:18,545 p=75537 u=trainer |  ok: [ubuntu1] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:38:18,572 p=75537 u=trainer |  ok: [ubuntu2] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:38:18,589 p=75537 u=trainer |  ok: [ubuntu3] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:38:18,597 p=75537 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:38:18,685 p=75537 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:38:18,688 p=75537 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:38:18,710 p=75537 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:38:18,715 p=75537 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 06:38:18,772 p=75537 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:38:18,781 p=75537 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:38:18,794 p=75537 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:38:18,796 p=75537 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:38:18,796 p=75537 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:38:18,797 p=75537 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:18,797 p=75537 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:18,797 p=75537 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:18,797 p=75537 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:18,797 p=75537 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:38:18,797 p=75537 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:40:07,616 p=76024 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:40:07,625 p=76024 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:40:10,288 p=76024 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:40:10,309 p=76024 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:40:11,158 p=76024 u=trainer |  ok: [centos3]
+2018-04-04 06:40:11,209 p=76024 u=trainer |  ok: [centos1]
+2018-04-04 06:40:11,224 p=76024 u=trainer |  ok: [centos2]
+2018-04-04 06:40:11,445 p=76024 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:40:11,459 p=76024 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:40:11,611 p=76024 u=trainer |  skipping: [centos1]
+2018-04-04 06:40:11,613 p=76024 u=trainer |  skipping: [centos2]
+2018-04-04 06:40:11,613 p=76024 u=trainer |  skipping: [centos3]
+2018-04-04 06:40:12,478 p=76024 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:40:12,486 p=76024 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:40:12,490 p=76024 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:40:12,497 p=76024 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:40:12,607 p=76024 u=trainer |  skipping: [centos1]
+2018-04-04 06:40:12,683 p=76024 u=trainer |  skipping: [centos2]
+2018-04-04 06:40:12,684 p=76024 u=trainer |  skipping: [centos3]
+2018-04-04 06:40:12,760 p=76024 u=trainer |  ok: [ubuntu1] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:40:12,812 p=76024 u=trainer |  ok: [ubuntu2] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:40:12,835 p=76024 u=trainer |  ok: [ubuntu3] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:40:12,841 p=76024 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:40:13,066 p=76024 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:40:13,095 p=76024 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:40:13,144 p=76024 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:40:13,827 p=76024 u=trainer |  ok: [centos3]
+2018-04-04 06:40:13,831 p=76024 u=trainer |  ok: [centos1]
+2018-04-04 06:40:13,834 p=76024 u=trainer |  ok: [centos2]
+2018-04-04 06:40:13,840 p=76024 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 06:40:14,066 p=76024 u=trainer |  ok: [centos1] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:40:14,066 p=76024 u=trainer |  ok: [centos2] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:40:14,067 p=76024 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:40:14,079 p=76024 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:40:14,088 p=76024 u=trainer |  ok: [centos3] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:40:14,112 p=76024 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:40:14,127 p=76024 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:40:14,127 p=76024 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:40:14,127 p=76024 u=trainer |  centos1                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:40:14,127 p=76024 u=trainer |  centos2                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:40:14,128 p=76024 u=trainer |  centos3                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:40:14,128 p=76024 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:40:14,128 p=76024 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:40:14,128 p=76024 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:41:09,076 p=76532 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:41:09,085 p=76532 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:41:11,163 p=76532 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:41:11,634 p=76532 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:41:12,644 p=76532 u=trainer |  ok: [centos3]
+2018-04-04 06:41:12,659 p=76532 u=trainer |  ok: [centos1]
+2018-04-04 06:41:12,667 p=76532 u=trainer |  ok: [centos2]
+2018-04-04 06:41:12,690 p=76532 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:41:12,696 p=76532 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:41:12,864 p=76532 u=trainer |  skipping: [centos1]
+2018-04-04 06:41:12,865 p=76532 u=trainer |  skipping: [centos2]
+2018-04-04 06:41:12,887 p=76532 u=trainer |  skipping: [centos3]
+2018-04-04 06:41:13,800 p=76532 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:41:13,804 p=76532 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:41:13,807 p=76532 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:41:13,813 p=76532 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:41:13,997 p=76532 u=trainer |  skipping: [centos1]
+2018-04-04 06:41:13,997 p=76532 u=trainer |  skipping: [centos2]
+2018-04-04 06:41:14,006 p=76532 u=trainer |  skipping: [centos3]
+2018-04-04 06:41:14,093 p=76532 u=trainer |  ok: [ubuntu1] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:41:14,101 p=76532 u=trainer |  ok: [ubuntu2] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:41:14,126 p=76532 u=trainer |  ok: [ubuntu3] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:41:14,133 p=76532 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:41:14,386 p=76532 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:41:14,429 p=76532 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:41:14,496 p=76532 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:41:14,950 p=76532 u=trainer |  ok: [centos1]
+2018-04-04 06:41:15,396 p=76532 u=trainer |  ok: [centos3]
+2018-04-04 06:41:15,403 p=76532 u=trainer |  ok: [centos2]
+2018-04-04 06:41:15,409 p=76532 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 06:41:15,594 p=76532 u=trainer |  ok: [centos1] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:41:15,657 p=76532 u=trainer |  ok: [centos2] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:41:15,658 p=76532 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:41:15,688 p=76532 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:41:15,702 p=76532 u=trainer |  ok: [centos3] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:41:15,725 p=76532 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:41:15,731 p=76532 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:41:15,731 p=76532 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:41:15,732 p=76532 u=trainer |  centos1                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:41:15,732 p=76532 u=trainer |  centos2                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:41:15,732 p=76532 u=trainer |  centos3                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:41:15,732 p=76532 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:41:15,732 p=76532 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:41:15,732 p=76532 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:43:55,280 p=77005 u=trainer |  ansible-playbook 2.4.2.0
+  config file = /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /bin/ansible-playbook
+  python version = 2.7.5 (default, Aug  4 2017, 00:39:18) [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+2018-04-04 06:43:55,281 p=77005 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 06:43:55,289 p=77005 u=trainer |  Parsed /home/trainer/Desktop/day3/centos-sshd-passwordless/hosts inventory source with ini plugin
+2018-04-04 06:43:55,539 p=77005 u=trainer |  PLAYBOOK: playbook_checkNginxConfFilePresent.yml *******************************************************************************************
+2018-04-04 06:43:55,540 p=77005 u=trainer |  1 plays in playbook_checkNginxConfFilePresent.yml
+2018-04-04 06:43:55,576 p=77005 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:43:55,593 p=77005 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:43:56,198 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:56,202 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:56,206 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:56,210 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:56,213 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:58,398 p=77005 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:43:58,555 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:43:58,602 p=77005 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:44:00,017 p=77005 u=trainer |  ok: [centos2]
+2018-04-04 06:44:00,081 p=77005 u=trainer |  ok: [centos3]
+2018-04-04 06:44:00,103 p=77005 u=trainer |  ok: [centos1]
+2018-04-04 06:44:00,253 p=77005 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:44:00,254 p=77005 u=trainer |  META: ran handlers
+2018-04-04 06:44:00,266 p=77005 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:44:00,266 p=77005 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:6
+2018-04-04 06:44:00,361 p=77005 u=trainer |  skipping: [centos1] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:00,390 p=77005 u=trainer |  skipping: [centos2] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:00,450 p=77005 u=trainer |  skipping: [centos3] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:00,767 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:00,770 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:00,774 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:01,644 p=77005 u=trainer |  ok: [ubuntu2] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:44:01,646 p=77005 u=trainer |  ok: [ubuntu3] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:44:01,658 p=77005 u=trainer |  ok: [ubuntu1] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:44:01,665 p=77005 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:44:01,665 p=77005 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:14
+2018-04-04 06:44:01,780 p=77005 u=trainer |  skipping: [centos1] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:01,811 p=77005 u=trainer |  skipping: [centos2] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:01,881 p=77005 u=trainer |  skipping: [centos3] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:01,947 p=77005 u=trainer |  ok: [ubuntu1] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:44:01,955 p=77005 u=trainer |  ok: [ubuntu2] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:44:01,975 p=77005 u=trainer |  ok: [ubuntu3] => {
+    "msg": "nginx file present in ubunutu"
+}
+2018-04-04 06:44:01,981 p=77005 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:44:01,981 p=77005 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:18
+2018-04-04 06:44:02,109 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:02,166 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:02,260 p=77005 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:44:02,269 p=77005 u=trainer |  skipping: [ubuntu1] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:02,287 p=77005 u=trainer |  skipping: [ubuntu2] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:02,437 p=77005 u=trainer |  skipping: [ubuntu3] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:44:03,221 p=77005 u=trainer |  ok: [centos1] => {
+    "changed": false, 
+    "examined": 3, 
+    "files": [
+        {
+            "atime": 1522826895.76141, 
+            "ctime": 1522826680.3186603, 
+            "dev": 64768, 
+            "gid": 0, 
+            "inode": 24012990, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "mode": "0644", 
+            "mtime": 1522826679.298633, 
+            "nlink": 1, 
+            "path": "/etc/nginx/conf.d/default.conf", 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 439, 
+            "uid": 0, 
+            "wgrp": false, 
+            "woth": false, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    ], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/conf.d/"
+            ], 
+            "patterns": [
+                "default.conf"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 1, 
+    "msg": ""
+}
+2018-04-04 06:44:03,356 p=77005 u=trainer |  ok: [centos2] => {
+    "changed": false, 
+    "examined": 3, 
+    "files": [
+        {
+            "atime": 1522826896.1414201, 
+            "ctime": 1522826680.3136601, 
+            "dev": 64768, 
+            "gid": 0, 
+            "inode": 24012981, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "mode": "0644", 
+            "mtime": 1522826679.6126416, 
+            "nlink": 1, 
+            "path": "/etc/nginx/conf.d/default.conf", 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 439, 
+            "uid": 0, 
+            "wgrp": false, 
+            "woth": false, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    ], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/conf.d/"
+            ], 
+            "patterns": [
+                "default.conf"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 1, 
+    "msg": ""
+}
+2018-04-04 06:44:03,389 p=77005 u=trainer |  ok: [centos3] => {
+    "changed": false, 
+    "examined": 3, 
+    "files": [
+        {
+            "atime": 1522826896.13942, 
+            "ctime": 1522826680.3316607, 
+            "dev": 64768, 
+            "gid": 0, 
+            "inode": 41205389, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "mode": "0644", 
+            "mtime": 1522826679.6446424, 
+            "nlink": 1, 
+            "path": "/etc/nginx/conf.d/default.conf", 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 439, 
+            "uid": 0, 
+            "wgrp": false, 
+            "woth": false, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    ], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/conf.d/"
+            ], 
+            "patterns": [
+                "default.conf"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 1, 
+    "msg": ""
+}
+2018-04-04 06:44:03,399 p=77005 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 06:44:03,399 p=77005 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:26
+2018-04-04 06:44:03,636 p=77005 u=trainer |  ok: [centos1] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:44:03,654 p=77005 u=trainer |  ok: [centos2] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:44:03,654 p=77005 u=trainer |  fatal: [ubuntu1]: FAILED! => {
+    "msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"
+}
+2018-04-04 06:44:03,678 p=77005 u=trainer |  ok: [centos3] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:44:03,691 p=77005 u=trainer |  fatal: [ubuntu2]: FAILED! => {
+    "msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"
+}
+2018-04-04 06:44:03,702 p=77005 u=trainer |  fatal: [ubuntu3]: FAILED! => {
+    "msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"
+}
+2018-04-04 06:44:03,703 p=77005 u=trainer |  META: ran handlers
+2018-04-04 06:44:03,703 p=77005 u=trainer |  META: ran handlers
+2018-04-04 06:44:03,720 p=77005 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:44:03,720 p=77005 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:44:03,720 p=77005 u=trainer |  centos1                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:44:03,720 p=77005 u=trainer |  centos2                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:44:03,720 p=77005 u=trainer |  centos3                    : ok=3    changed=0    unreachable=0    failed=0   
+2018-04-04 06:44:03,720 p=77005 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:44:03,721 p=77005 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:44:03,721 p=77005 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:15,755 p=77531 u=trainer |  ansible-playbook 2.4.2.0
+  config file = /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /bin/ansible-playbook
+  python version = 2.7.5 (default, Aug  4 2017, 00:39:18) [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+2018-04-04 06:47:15,755 p=77531 u=trainer |  Using /home/trainer/Desktop/day3/centos-sshd-passwordless/ansible.cfg as config file
+2018-04-04 06:47:15,765 p=77531 u=trainer |  Parsed /home/trainer/Desktop/day3/centos-sshd-passwordless/hosts inventory source with ini plugin
+2018-04-04 06:47:16,057 p=77531 u=trainer |  PLAYBOOK: playbook_checkNginxConfFilePresent.yml *******************************************************************************************
+2018-04-04 06:47:16,057 p=77531 u=trainer |  1 plays in playbook_checkNginxConfFilePresent.yml
+2018-04-04 06:47:16,092 p=77531 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:47:16,109 p=77531 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:47:16,704 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:16,707 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:16,710 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:16,714 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:16,717 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:19,138 p=77531 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:47:19,183 p=77531 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:47:19,277 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-04-04 06:47:20,393 p=77531 u=trainer |  ok: [centos1]
+2018-04-04 06:47:20,617 p=77531 u=trainer |  ok: [centos3]
+2018-04-04 06:47:20,643 p=77531 u=trainer |  ok: [centos2]
+2018-04-04 06:47:20,823 p=77531 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:47:20,831 p=77531 u=trainer |  META: ran handlers
+2018-04-04 06:47:20,842 p=77531 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:47:20,843 p=77531 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:6
+2018-04-04 06:47:21,011 p=77531 u=trainer |  skipping: [centos1] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:47:21,012 p=77531 u=trainer |  skipping: [centos2] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:47:21,012 p=77531 u=trainer |  skipping: [centos3] => {
+    "changed": false, 
+    "skip_reason": "Conditional result was False"
+}
+2018-04-04 06:47:21,333 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:47:21,337 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:47:21,342 p=77531 u=trainer |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/files/find.py
+2018-04-04 06:47:22,193 p=77531 u=trainer |  ok: [ubuntu1] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:47:22,198 p=77531 u=trainer |  ok: [ubuntu3] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:47:22,203 p=77531 u=trainer |  ok: [ubuntu2] => {
+    "changed": false, 
+    "examined": 1, 
+    "files": [], 
+    "invocation": {
+        "module_args": {
+            "age": null, 
+            "age_stamp": "mtime", 
+            "contains": null, 
+            "file_type": "file", 
+            "follow": false, 
+            "get_checksum": false, 
+            "hidden": false, 
+            "paths": [
+                "/etc/nginx/sites-available/"
+            ], 
+            "patterns": [
+                "defaulwerwt"
+            ], 
+            "recurse": false, 
+            "size": null, 
+            "use_regex": false
+        }
+    }, 
+    "matched": 0, 
+    "msg": ""
+}
+2018-04-04 06:47:22,214 p=77531 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:47:22,214 p=77531 u=trainer |  task path: /home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml:14
+2018-04-04 06:47:22,399 p=77531 u=trainer |  fatal: [centos1]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,400 p=77531 u=trainer |  fatal: [centos2]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,400 p=77531 u=trainer |  fatal: [centos3]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,401 p=77531 u=trainer |  fatal: [ubuntu1]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,420 p=77531 u=trainer |  fatal: [ubuntu2]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,444 p=77531 u=trainer |  fatal: [ubuntu3]: FAILED! => {
+    "msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"
+}
+2018-04-04 06:47:22,450 p=77531 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:47:22,450 p=77531 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:47:22,450 p=77531 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:22,450 p=77531 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:22,450 p=77531 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:22,450 p=77531 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:22,451 p=77531 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:22,451 p=77531 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:36,491 p=77931 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:47:36,500 p=77931 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:47:38,491 p=77931 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:47:39,025 p=77931 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:47:39,915 p=77931 u=trainer |  ok: [centos3]
+2018-04-04 06:47:39,962 p=77931 u=trainer |  ok: [centos1]
+2018-04-04 06:47:39,990 p=77931 u=trainer |  ok: [centos2]
+2018-04-04 06:47:40,002 p=77931 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:47:40,013 p=77931 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:47:40,172 p=77931 u=trainer |  skipping: [centos1]
+2018-04-04 06:47:40,173 p=77931 u=trainer |  skipping: [centos2]
+2018-04-04 06:47:40,173 p=77931 u=trainer |  skipping: [centos3]
+2018-04-04 06:47:41,013 p=77931 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:47:41,018 p=77931 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:47:41,022 p=77931 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:47:41,029 p=77931 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:47:41,168 p=77931 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,198 p=77931 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,199 p=77931 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,204 p=77931 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,213 p=77931 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,231 p=77931 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:47:41,236 p=77931 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:47:41,236 p=77931 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:47:41,236 p=77931 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:41,237 p=77931 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:41,237 p=77931 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:41,237 p=77931 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:41,237 p=77931 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:47:41,237 p=77931 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:37,559 p=78299 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:48:37,568 p=78299 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:48:39,874 p=78299 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:48:39,920 p=78299 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:48:41,034 p=78299 u=trainer |  ok: [centos1]
+2018-04-04 06:48:41,044 p=78299 u=trainer |  ok: [centos2]
+2018-04-04 06:48:41,062 p=78299 u=trainer |  ok: [centos3]
+2018-04-04 06:48:41,223 p=78299 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:48:41,238 p=78299 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:48:41,403 p=78299 u=trainer |  skipping: [centos1]
+2018-04-04 06:48:41,403 p=78299 u=trainer |  skipping: [centos2]
+2018-04-04 06:48:41,404 p=78299 u=trainer |  skipping: [centos3]
+2018-04-04 06:48:42,319 p=78299 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:48:42,322 p=78299 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:48:42,326 p=78299 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:48:42,333 p=78299 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:48:42,514 p=78299 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,520 p=78299 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,520 p=78299 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,521 p=78299 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,536 p=78299 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,572 p=78299 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched.matched == 1 is success and ansible_os_family == \"Debian\" and ansible_distribution == \"Ubuntu\")' failed. The error was: |failed expects a dictionary\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 14, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 06:48:42,581 p=78299 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:48:42,581 p=78299 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:48:42,581 p=78299 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:42,581 p=78299 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:42,582 p=78299 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:42,582 p=78299 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:42,582 p=78299 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:48:42,582 p=78299 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 06:49:09,026 p=78649 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 06:49:09,037 p=78649 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 06:49:11,403 p=78649 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:49:11,413 p=78649 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:49:12,439 p=78649 u=trainer |  ok: [centos1]
+2018-04-04 06:49:12,449 p=78649 u=trainer |  ok: [centos2]
+2018-04-04 06:49:12,469 p=78649 u=trainer |  ok: [centos3]
+2018-04-04 06:49:12,572 p=78649 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:49:12,579 p=78649 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 06:49:12,669 p=78649 u=trainer |  skipping: [centos1]
+2018-04-04 06:49:12,706 p=78649 u=trainer |  skipping: [centos2]
+2018-04-04 06:49:12,787 p=78649 u=trainer |  skipping: [centos3]
+2018-04-04 06:49:13,768 p=78649 u=trainer |  ok: [ubuntu1]
+2018-04-04 06:49:13,773 p=78649 u=trainer |  ok: [ubuntu2]
+2018-04-04 06:49:13,778 p=78649 u=trainer |  ok: [ubuntu3]
+2018-04-04 06:49:13,785 p=78649 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 06:49:14,042 p=78649 u=trainer |  ok: [centos1] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 06:49:14,043 p=78649 u=trainer |  ok: [centos2] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 06:49:14,083 p=78649 u=trainer |  ok: [centos3] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 06:49:14,113 p=78649 u=trainer |  ok: [ubuntu1] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [], 
+        "matched": 0, 
+        "msg": ""
+    }
+}
+2018-04-04 06:49:14,143 p=78649 u=trainer |  ok: [ubuntu2] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [], 
+        "matched": 0, 
+        "msg": ""
+    }
+}
+2018-04-04 06:49:14,154 p=78649 u=trainer |  ok: [ubuntu3] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [], 
+        "matched": 0, 
+        "msg": ""
+    }
+}
+2018-04-04 06:49:14,161 p=78649 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 06:49:14,408 p=78649 u=trainer |  skipping: [ubuntu1]
+2018-04-04 06:49:14,430 p=78649 u=trainer |  skipping: [ubuntu2]
+2018-04-04 06:49:14,500 p=78649 u=trainer |  skipping: [ubuntu3]
+2018-04-04 06:49:15,090 p=78649 u=trainer |  ok: [centos1]
+2018-04-04 06:49:15,410 p=78649 u=trainer |  ok: [centos3]
+2018-04-04 06:49:15,430 p=78649 u=trainer |  ok: [centos2]
+2018-04-04 06:49:15,438 p=78649 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 06:49:15,691 p=78649 u=trainer |  ok: [centos1] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:49:15,692 p=78649 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:49:15,693 p=78649 u=trainer |  ok: [centos2] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:49:15,709 p=78649 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:49:15,727 p=78649 u=trainer |  ok: [centos3] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 06:49:15,740 p=78649 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 26, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 06:49:15,747 p=78649 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 06:49:15,747 p=78649 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 06:49:15,747 p=78649 u=trainer |  centos1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 06:49:15,747 p=78649 u=trainer |  centos2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 06:49:15,748 p=78649 u=trainer |  centos3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 06:49:15,748 p=78649 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:49:15,748 p=78649 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 06:49:15,748 p=78649 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 07:19:57,129 p=79621 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:19:57,138 p=79621 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:19:59,710 p=79621 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:19:59,747 p=79621 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:20:00,844 p=79621 u=trainer |  ok: [centos2]
+2018-04-04 07:20:00,854 p=79621 u=trainer |  ok: [centos1]
+2018-04-04 07:20:00,873 p=79621 u=trainer |  ok: [centos3]
+2018-04-04 07:20:01,031 p=79621 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:20:01,038 p=79621 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 07:20:01,195 p=79621 u=trainer |  skipping: [centos1]
+2018-04-04 07:20:01,196 p=79621 u=trainer |  skipping: [centos2]
+2018-04-04 07:20:01,196 p=79621 u=trainer |  skipping: [centos3]
+2018-04-04 07:20:02,446 p=79621 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:20:02,461 p=79621 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:20:02,466 p=79621 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:20:02,479 p=79621 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 07:20:02,769 p=79621 u=trainer |  ok: [centos1] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 07:20:02,779 p=79621 u=trainer |  ok: [centos2] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 07:20:02,840 p=79621 u=trainer |  ok: [ubuntu1] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [
+            {
+                "atime": 1522750779.977424, 
+                "ctime": 1522750624.7042549, 
+                "dev": 64768, 
+                "gid": 0, 
+                "inode": 58938183, 
+                "isblk": false, 
+                "ischr": false, 
+                "isdir": false, 
+                "isfifo": false, 
+                "isgid": false, 
+                "islnk": false, 
+                "isreg": true, 
+                "issock": false, 
+                "isuid": false, 
+                "mode": "0644", 
+                "mtime": 1522750624.2122416, 
+                "nlink": 1, 
+                "path": "/etc/nginx/sites-available/default", 
+                "rgrp": true, 
+                "roth": true, 
+                "rusr": true, 
+                "size": 2070, 
+                "uid": 0, 
+                "wgrp": false, 
+                "woth": false, 
+                "wusr": true, 
+                "xgrp": false, 
+                "xoth": false, 
+                "xusr": false
+            }
+        ], 
+        "matched": 1, 
+        "msg": ""
+    }
+}
+2018-04-04 07:20:02,853 p=79621 u=trainer |  ok: [centos3] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2018-04-04 07:20:02,871 p=79621 u=trainer |  ok: [ubuntu2] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [
+            {
+                "atime": 1522820192.1201584, 
+                "ctime": 1522820188.4450662, 
+                "dev": 64768, 
+                "gid": 0, 
+                "inode": 8676987, 
+                "isblk": false, 
+                "ischr": false, 
+                "isdir": false, 
+                "isfifo": false, 
+                "isgid": false, 
+                "islnk": false, 
+                "isreg": true, 
+                "issock": false, 
+                "isuid": false, 
+                "mode": "0644", 
+                "mtime": 1522820187.593045, 
+                "nlink": 1, 
+                "path": "/etc/nginx/sites-available/default", 
+                "rgrp": true, 
+                "roth": true, 
+                "rusr": true, 
+                "size": 2070, 
+                "uid": 0, 
+                "wgrp": false, 
+                "woth": false, 
+                "wusr": true, 
+                "xgrp": false, 
+                "xoth": false, 
+                "xusr": false
+            }
+        ], 
+        "matched": 1, 
+        "msg": ""
+    }
+}
+2018-04-04 07:20:02,886 p=79621 u=trainer |  ok: [ubuntu3] => {
+    "msg": {
+        "changed": false, 
+        "examined": 1, 
+        "failed": false, 
+        "files": [
+            {
+                "atime": 1522820192.1881602, 
+                "ctime": 1522820188.440066, 
+                "dev": 64768, 
+                "gid": 0, 
+                "inode": 22925730, 
+                "isblk": false, 
+                "ischr": false, 
+                "isdir": false, 
+                "isfifo": false, 
+                "isgid": false, 
+                "islnk": false, 
+                "isreg": true, 
+                "issock": false, 
+                "isuid": false, 
+                "mode": "0644", 
+                "mtime": 1522820187.79305, 
+                "nlink": 1, 
+                "path": "/etc/nginx/sites-available/default", 
+                "rgrp": true, 
+                "roth": true, 
+                "rusr": true, 
+                "size": 2070, 
+                "uid": 0, 
+                "wgrp": false, 
+                "woth": false, 
+                "wusr": true, 
+                "xgrp": false, 
+                "xoth": false, 
+                "xusr": false
+            }
+        ], 
+        "matched": 1, 
+        "msg": ""
+    }
+}
+2018-04-04 07:20:02,892 p=79621 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 07:20:03,152 p=79621 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:20:03,184 p=79621 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:20:03,240 p=79621 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:20:03,863 p=79621 u=trainer |  ok: [centos1]
+2018-04-04 07:20:04,125 p=79621 u=trainer |  ok: [centos3]
+2018-04-04 07:20:04,129 p=79621 u=trainer |  ok: [centos2]
+2018-04-04 07:20:04,135 p=79621 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 07:20:04,359 p=79621 u=trainer |  ok: [centos1] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 07:20:04,363 p=79621 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:20:04,363 p=79621 u=trainer |  ok: [centos2] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 07:20:04,377 p=79621 u=trainer |  ok: [centos3] => {
+    "msg": "nginx conf present in centos"
+}
+2018-04-04 07:20:04,385 p=79621 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:20:04,416 p=79621 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((files_matched_c.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:20:04,420 p=79621 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 07:20:04,420 p=79621 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 07:20:04,421 p=79621 u=trainer |  centos1                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 07:20:04,421 p=79621 u=trainer |  centos2                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 07:20:04,421 p=79621 u=trainer |  centos3                    : ok=4    changed=0    unreachable=0    failed=0   
+2018-04-04 07:20:04,421 p=79621 u=trainer |  ubuntu1                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 07:20:04,421 p=79621 u=trainer |  ubuntu2                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 07:20:04,421 p=79621 u=trainer |  ubuntu3                    : ok=3    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:35,285 p=80178 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:23:35,296 p=80178 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:23:37,396 p=80178 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:23:37,699 p=80178 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:23:38,706 p=80178 u=trainer |  ok: [centos3]
+2018-04-04 07:23:38,795 p=80178 u=trainer |  ok: [centos2]
+2018-04-04 07:23:38,840 p=80178 u=trainer |  ok: [centos1]
+2018-04-04 07:23:38,940 p=80178 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:23:38,946 p=80178 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 07:23:39,094 p=80178 u=trainer |  skipping: [centos1]
+2018-04-04 07:23:39,095 p=80178 u=trainer |  skipping: [centos2]
+2018-04-04 07:23:39,095 p=80178 u=trainer |  skipping: [centos3]
+2018-04-04 07:23:39,915 p=80178 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:23:39,990 p=80178 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:23:39,995 p=80178 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:23:40,009 p=80178 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 07:23:40,102 p=80178 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:23:40,135 p=80178 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:23:40,198 p=80178 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:23:40,198 p=80178 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:23:40,198 p=80178 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:23:40,218 p=80178 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:23:40,223 p=80178 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 07:23:40,280 p=80178 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:23:40,290 p=80178 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:23:40,303 p=80178 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:23:40,308 p=80178 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 07:23:40,367 p=80178 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:23:40,380 p=80178 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:23:40,394 p=80178 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:23:40,396 p=80178 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 07:23:40,397 p=80178 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 07:23:40,397 p=80178 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:40,397 p=80178 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:40,397 p=80178 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:40,397 p=80178 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:40,397 p=80178 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:23:40,397 p=80178 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:37,851 p=80600 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:24:37,861 p=80600 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:24:39,951 p=80600 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:24:40,461 p=80600 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:24:41,345 p=80600 u=trainer |  ok: [centos3]
+2018-04-04 07:24:41,363 p=80600 u=trainer |  ok: [centos1]
+2018-04-04 07:24:41,379 p=80600 u=trainer |  ok: [centos2]
+2018-04-04 07:24:41,425 p=80600 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:24:41,437 p=80600 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 07:24:41,587 p=80600 u=trainer |  skipping: [centos1]
+2018-04-04 07:24:41,588 p=80600 u=trainer |  skipping: [centos2]
+2018-04-04 07:24:41,588 p=80600 u=trainer |  skipping: [centos3]
+2018-04-04 07:24:42,474 p=80600 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:24:42,488 p=80600 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:24:42,537 p=80600 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:24:42,543 p=80600 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 07:24:42,703 p=80600 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:24:42,704 p=80600 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:24:42,704 p=80600 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:24:42,705 p=80600 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:24:42,720 p=80600 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:24:42,729 p=80600 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:24:42,734 p=80600 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 07:24:42,799 p=80600 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:24:42,807 p=80600 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:24:42,816 p=80600 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:24:42,822 p=80600 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 07:24:42,883 p=80600 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:24:42,893 p=80600 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:24:42,907 p=80600 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:24:42,909 p=80600 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 07:24:42,909 p=80600 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 07:24:42,909 p=80600 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:42,909 p=80600 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:42,909 p=80600 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:42,910 p=80600 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:42,910 p=80600 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:24:42,910 p=80600 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:30,367 p=81009 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:28:30,377 p=81009 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:28:31,805 p=81009 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:28:31,815 p=81009 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:28:32,321 p=81009 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:28:34,649 p=81009 u=trainer |  ok: [centos2]
+2018-04-04 07:28:34,718 p=81009 u=trainer |  ok: [centos1]
+2018-04-04 07:28:34,730 p=81009 u=trainer |  ok: [centos3]
+2018-04-04 07:28:34,748 p=81009 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 07:28:34,917 p=81009 u=trainer |  skipping: [centos1]
+2018-04-04 07:28:34,917 p=81009 u=trainer |  skipping: [centos2]
+2018-04-04 07:28:34,918 p=81009 u=trainer |  skipping: [centos3]
+2018-04-04 07:28:35,714 p=81009 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:28:35,967 p=81009 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:28:35,967 p=81009 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:28:35,973 p=81009 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 07:28:36,107 p=81009 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:28:36,108 p=81009 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:28:36,110 p=81009 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:28:36,110 p=81009 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:28:36,120 p=81009 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:28:36,120 p=81009 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:28:36,126 p=81009 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 07:28:36,176 p=81009 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:28:36,193 p=81009 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:28:36,197 p=81009 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:28:36,202 p=81009 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 07:28:36,272 p=81009 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:28:36,284 p=81009 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:28:36,310 p=81009 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:28:36,318 p=81009 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 07:28:36,319 p=81009 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 07:28:36,319 p=81009 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:36,319 p=81009 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:36,319 p=81009 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:36,319 p=81009 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:36,319 p=81009 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:28:36,320 p=81009 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:29:04,960 p=81429 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:29:04,970 p=81429 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:29:05,566 p=81429 u=trainer |   [ERROR]: User interrupted execution
+
+2018-04-04 07:44:21,165 p=81785 u=trainer |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_handlers.yml': line 38, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   - handlers:
+     ^ here
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_handlers.yml': line 38, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   - handlers:
+     ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_handlers.yml': line 38, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   - handlers:
+     ^ here
+
+2018-04-04 07:44:46,813 p=81819 u=trainer |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_handlers.yml': line 38, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - handlers:
+ ^ here
+
+exception type: <class 'yaml.parser.ParserError'>
+exception: while parsing a block collection
+  in "<unicode string>", line 1, column 1
+did not find expected '-' indicator
+  in "<unicode string>", line 38, column 2
+2018-04-04 07:45:06,360 p=81852 u=trainer |  PLAY [This playbook will coinfigure and deploy webpages onubuntu and centos servers] *******************************************************
+2018-04-04 07:45:06,390 p=81852 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:45:08,897 p=81852 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:45:08,916 p=81852 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:45:09,871 p=81852 u=trainer |  ok: [centos3]
+2018-04-04 07:45:09,927 p=81852 u=trainer |  ok: [centos2]
+2018-04-04 07:45:10,033 p=81852 u=trainer |  ok: [centos1]
+2018-04-04 07:45:10,183 p=81852 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:45:10,190 p=81852 u=trainer |  TASK [Install nginx on UBuntuOS] ***********************************************************************************************************
+2018-04-04 07:45:10,268 p=81852 u=trainer |  skipping: [centos1]
+2018-04-04 07:45:10,296 p=81852 u=trainer |  skipping: [centos2]
+2018-04-04 07:45:10,343 p=81852 u=trainer |  skipping: [centos3]
+2018-04-04 07:46:01,989 p=81852 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:48:19,299 p=81852 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:48:51,328 p=81852 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:48:51,335 p=81852 u=trainer |  TASK [Install epel-release on CEntOS] ******************************************************************************************************
+2018-04-04 07:48:51,551 p=81852 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:48:51,551 p=81852 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:48:51,583 p=81852 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:48:53,034 p=81852 u=trainer |  ok: [centos2]
+2018-04-04 07:48:53,043 p=81852 u=trainer |  ok: [centos1]
+2018-04-04 07:48:53,055 p=81852 u=trainer |  ok: [centos3]
+2018-04-04 07:48:53,060 p=81852 u=trainer |  TASK [Install nginx on centOS] *************************************************************************************************************
+2018-04-04 07:48:53,254 p=81852 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:48:53,282 p=81852 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:48:53,305 p=81852 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:48:54,866 p=81852 u=trainer |  ok: [centos1]
+2018-04-04 07:48:55,212 p=81852 u=trainer |  ok: [centos2]
+2018-04-04 07:48:55,218 p=81852 u=trainer |  ok: [centos3]
+2018-04-04 07:48:55,224 p=81852 u=trainer |  TASK [Configure nginx on UbuntuOS] *********************************************************************************************************
+2018-04-04 07:48:55,283 p=81852 u=trainer |  skipping: [centos1]
+2018-04-04 07:48:55,372 p=81852 u=trainer |  skipping: [centos2]
+2018-04-04 07:48:55,372 p=81852 u=trainer |  skipping: [centos3]
+2018-04-04 07:48:57,136 p=81852 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:48:57,141 p=81852 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:48:57,141 p=81852 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:48:57,149 p=81852 u=trainer |  TASK [Configure nginx on CEntOS] ***********************************************************************************************************
+2018-04-04 07:48:57,398 p=81852 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:48:57,488 p=81852 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:48:57,555 p=81852 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:48:58,568 p=81852 u=trainer |  ok: [centos2]
+2018-04-04 07:48:58,865 p=81852 u=trainer |  ok: [centos1]
+2018-04-04 07:48:58,879 p=81852 u=trainer |  ok: [centos3]
+2018-04-04 07:48:58,890 p=81852 u=trainer |  TASK [Create custom web page in nginx] *****************************************************************************************************
+2018-04-04 07:49:00,303 p=81852 u=trainer |   [WARNING]: Consider using file module with state=directory rather than running mkdir
+
+2018-04-04 07:49:00,304 p=81852 u=trainer |  changed: [ubuntu1]
+2018-04-04 07:49:00,313 p=81852 u=trainer |  changed: [ubuntu2]
+2018-04-04 07:49:00,476 p=81852 u=trainer |  changed: [centos3]
+2018-04-04 07:49:00,487 p=81852 u=trainer |  changed: [centos1]
+2018-04-04 07:49:00,496 p=81852 u=trainer |  changed: [centos2]
+2018-04-04 07:49:00,791 p=81852 u=trainer |  changed: [ubuntu3]
+2018-04-04 07:49:00,798 p=81852 u=trainer |  TASK [Deploy webpage i nnginx] *************************************************************************************************************
+2018-04-04 07:49:02,413 p=81852 u=trainer |  ok: [centos1]
+2018-04-04 07:49:03,180 p=81852 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:49:03,188 p=81852 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:49:03,294 p=81852 u=trainer |  ok: [centos2]
+2018-04-04 07:49:03,303 p=81852 u=trainer |  ok: [centos3]
+2018-04-04 07:49:03,587 p=81852 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:49:03,590 p=81852 u=trainer |  ERROR! the field 'hosts' is required but was not set
+2018-04-04 07:57:52,796 p=83889 u=trainer |  PLAY [Check wether nginx conf file is present in ubuntu and centOS systems] ****************************************************************
+2018-04-04 07:57:52,817 p=83889 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 07:57:55,364 p=83889 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:57:55,422 p=83889 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:57:56,313 p=83889 u=trainer |  ok: [centos3]
+2018-04-04 07:57:56,423 p=83889 u=trainer |  ok: [centos2]
+2018-04-04 07:57:56,473 p=83889 u=trainer |  ok: [centos1]
+2018-04-04 07:57:56,684 p=83889 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:57:56,690 p=83889 u=trainer |  TASK [Find the File in ubuntuOS] ***********************************************************************************************************
+2018-04-04 07:57:56,823 p=83889 u=trainer |  skipping: [centos1]
+2018-04-04 07:57:56,824 p=83889 u=trainer |  skipping: [centos2]
+2018-04-04 07:57:56,824 p=83889 u=trainer |  skipping: [centos3]
+2018-04-04 07:57:57,651 p=83889 u=trainer |  ok: [ubuntu1]
+2018-04-04 07:57:57,657 p=83889 u=trainer |  ok: [ubuntu2]
+2018-04-04 07:57:57,661 p=83889 u=trainer |  ok: [ubuntu3]
+2018-04-04 07:57:57,667 p=83889 u=trainer |  TASK [File found in ubuntu] ****************************************************************************************************************
+2018-04-04 07:57:57,859 p=83889 u=trainer |  fatal: [centos1]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:57:57,860 p=83889 u=trainer |  fatal: [centos2]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:57:57,861 p=83889 u=trainer |  fatal: [centos3]: FAILED! => {"msg": "The conditional check '(res.matched == 1)' failed. The error was: error while evaluating conditional ((res.matched == 1)): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 13, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: File found in ubuntu\n     ^ here\n"}
+2018-04-04 07:57:57,861 p=83889 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:57:57,872 p=83889 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:57:57,883 p=83889 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:57:57,888 p=83889 u=trainer |  TASK [Find the File in centOS] *************************************************************************************************************
+2018-04-04 07:57:57,938 p=83889 u=trainer |  skipping: [ubuntu1]
+2018-04-04 07:57:57,976 p=83889 u=trainer |  skipping: [ubuntu2]
+2018-04-04 07:57:57,977 p=83889 u=trainer |  skipping: [ubuntu3]
+2018-04-04 07:57:57,982 p=83889 u=trainer |  TASK [FIle found in centos] ****************************************************************************************************************
+2018-04-04 07:57:58,065 p=83889 u=trainer |  fatal: [ubuntu1]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:57:58,069 p=83889 u=trainer |  fatal: [ubuntu2]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:57:58,071 p=83889 u=trainer |  fatal: [ubuntu3]: FAILED! => {"msg": "The conditional check '(res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")' failed. The error was: error while evaluating conditional ((res.matched == 1 and ansible_os_family == \"RedHat\" and ansible_distribution == \"CentOS\")): 'dict object' has no attribute 'matched'\n\nThe error appears to have been in '/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.yml': line 24, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: FIle found in centos\n     ^ here\n"}
+2018-04-04 07:57:58,074 p=83889 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_checkNginxConfFilePresent.retry
+
+2018-04-04 07:57:58,074 p=83889 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 07:57:58,075 p=83889 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:57:58,075 p=83889 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:57:58,075 p=83889 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 07:57:58,075 p=83889 u=trainer |  ubuntu1                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:57:58,075 p=83889 u=trainer |  ubuntu2                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 07:57:58,075 p=83889 u=trainer |  ubuntu3                    : ok=2    changed=0    unreachable=0    failed=1   
+2018-04-04 08:17:50,688 p=84729 u=trainer |  PLAY [Demo ansible loops] ******************************************************************************************************************
+2018-04-04 08:17:50,697 p=84729 u=trainer |  TASK [Gathering Facts] *********************************************************************************************************************
+2018-04-04 08:17:53,156 p=84729 u=trainer |  ok: [ubuntu1]
+2018-04-04 08:17:53,184 p=84729 u=trainer |  ok: [ubuntu2]
+2018-04-04 08:17:54,014 p=84729 u=trainer |  ok: [centos3]
+2018-04-04 08:17:54,036 p=84729 u=trainer |  ok: [centos2]
+2018-04-04 08:17:54,055 p=84729 u=trainer |  ok: [centos1]
+2018-04-04 08:17:54,214 p=84729 u=trainer |  ok: [ubuntu3]
+2018-04-04 08:17:54,221 p=84729 u=trainer |  TASK [Install thge software packs] *********************************************************************************************************
+2018-04-04 08:17:56,044 p=84729 u=trainer |  failed: [centos3] (item=[u'vim', u'tree', u'curl']) => {"changed": false, "cmd": "apt-get update", "item": ["vim", "tree", "curl"], "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 08:17:56,073 p=84729 u=trainer |  failed: [centos1] (item=[u'vim', u'tree', u'curl']) => {"changed": false, "cmd": "apt-get update", "item": ["vim", "tree", "curl"], "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 08:17:56,083 p=84729 u=trainer |  failed: [centos2] (item=[u'vim', u'tree', u'curl']) => {"changed": false, "cmd": "apt-get update", "item": ["vim", "tree", "curl"], "msg": "[Errno 2] No such file or directory", "rc": 2}
+2018-04-04 08:18:28,890 p=84729 u=trainer |  changed: [ubuntu1] => (item=[u'vim', u'tree', u'curl'])
+2018-04-04 08:18:32,723 p=84729 u=trainer |  changed: [ubuntu2] => (item=[u'vim', u'tree', u'curl'])
+2018-04-04 08:21:32,200 p=84729 u=trainer |  changed: [ubuntu3] => (item=[u'vim', u'tree', u'curl'])
+2018-04-04 08:21:32,216 p=84729 u=trainer |  	to retry, use: --limit @/home/trainer/Desktop/day3/centos-sshd-passwordless/playbook_loops.retry
+
+2018-04-04 08:21:32,216 p=84729 u=trainer |  PLAY RECAP *********************************************************************************************************************************
+2018-04-04 08:21:32,216 p=84729 u=trainer |  centos1                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 08:21:32,217 p=84729 u=trainer |  centos2                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 08:21:32,217 p=84729 u=trainer |  centos3                    : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-04 08:21:32,217 p=84729 u=trainer |  ubuntu1                    : ok=2    changed=1    unreachable=0    failed=0   
+2018-04-04 08:21:32,217 p=84729 u=trainer |  ubuntu2                    : ok=2    changed=1    unreachable=0    failed=0   
+2018-04-04 08:21:32,217 p=84729 u=trainer |  ubuntu3                    : ok=2    changed=1    unreachable=0    failed=0   
