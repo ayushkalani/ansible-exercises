@@ -1,0 +1,8 @@
+- name: Demo retrevial of sensitive data protected by ansiable vault
+  hosts: all
+  vars_files:
+  - test_sensitive_data
+  tasks:
+   - name: Print the file content
+     debug: msg="{{item}}" verbosity=1
+     with_dict: "{{credentials}}"
