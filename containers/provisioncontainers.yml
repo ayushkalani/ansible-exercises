@@ -1,0 +1,32 @@
+- name: This playbopok will start a container on the fly
+  hosts: localhost
+  become: yes
+  vars:
+   - api_version: 1.18
+   - docker_host: tcp://localhost:2375
+  tasks:
+   - name: Provision ubuuntu docker container - start a docker container
+     docker_container: 
+       docker_host: "{{docker_host}}"
+       api_version: "{{api_version}}"
+       image: verizon/ansible-ubuntu
+       hostname: "ubuntu{{item}}"
+       name: "ubuntu{{item}}"
+       state: started
+       ports:
+        - "200{{item}}:22"
+        - "800{{item}}:80"
+     sequence: start=1 end=4
+   - name: Provision a centos container - start a docker container
+     docker_container:
+       docker_host: "{{docker_host}}"
+       api_version: "{{api_version}}"
+       image: verizon/ansible-centos
+       hostname: "centos{{item}}"
+       name: "centos{{item}}"
+       state: started
+       ports:
+        - "300{{item}}:22"
+        - "900{{item}}:80"
+     sequence: start=1 end=4
+

@@ -1,0 +1,9 @@
+- name: Stop all containers
+  hosts: localhost
+  become: yes
+  tasks:
+     - name: Stop a container
+       docker_container:
+         name: "ubuntu{{item}}"
+         state: stopped
+       sequence: start=1 end=4
